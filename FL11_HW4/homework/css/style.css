@@ -481,7 +481,34 @@ h5{
 }
 
 .epam-footer-nav nav a:last-of-type{
-	margin-right: 0;
-	
+	margin-right: 0;	
+}
+
+@media screen and (max-width: 1920px) {
+
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+
+    html {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    html {
+        font-size: 6px;
+    }
 }
 
