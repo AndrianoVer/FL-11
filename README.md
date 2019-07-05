@@ -7,5 +7,5 @@ EPAM
 <div><a href="https://AndrianoVer.github.io/FL-11/FL11_HW3/homework/index.html">Homework 3</a></div>
 <div><a href="https://AndrianoVer.github.io/FL-11/FL11_HW4/homework/index.html">Homework 4</a></div>
 <div><a href="https://AndrianoVer.github.io/FL-11/FL11_HW5/homework/index.html">Homework 5</a></div>
-<div><a href="https://AndrianoVer.github.io/FL-11/FL11_HW5/homework/task1.html">Homework 6 Task1</a></div>
-<div><a href="https://AndrianoVer.github.io/FL-11/FL11_HW5/homework/task2.html">Homework 6 Task2</a></div>
+<div><a href="https://AndrianoVer.github.io/FL-11/FL11_HW6/homework/task1.html">Homework 6 Task1</a></div>
+<div><a href="https://AndrianoVer.github.io/FL-11/FL11_HW6/homework/task2.html">Homework 6 Task2</a></div>
