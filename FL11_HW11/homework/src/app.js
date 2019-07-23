@@ -97,10 +97,10 @@ const alert_template = (msg, class_name) => {
 
 // };
 
-// btn_add.addEventListener('click', (e) => {
-	
-
-// });
+btn_add.addEventListener('click', () => {
+	add_new_todo(input_text.value);
+	input_text.value = '';
+});
 
 input_text.addEventListener('keyup', () => {
 	if (input_text.value) {
