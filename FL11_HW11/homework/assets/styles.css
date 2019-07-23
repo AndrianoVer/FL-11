@@ -1,0 +1,168 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+ 
+/* HTML5 display-role reset for older browsers */
+ 
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+ 
+ol, ul {
+  list-style: none;
+}
+ 
+blockquote, q {
+  quotes: none;
+}
+ 
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+ 
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ===== Reset end ===== */
+
+#root{
+	padding: 30px 20px;
+}
+
+.container{
+	max-width: 1200px;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+header{
+	margin-bottom: 15px;
+}
+
+#root .todo{	
+	display: flex;
+	justify-content: center;
+	font-size: 32px;
+	color: lightskyblue;
+	font-weight: 700;
+}
+
+.input-inner{
+	display: flex;
+	justify-content: space-between;
+}
+
+.for-input{
+	flex-basis: 90%;
+}
+
+.for-icon{
+	flex-basis: 10%;
+	margin-left: 10px;
+}
+
+.add_someaction{
+	border: 1px solid #dadada;
+    height: 52px;
+    width: 100%;
+    padding: 10px 30px;    
+}
+
+
+.line{
+	width: 95%;
+	background-color: lightskyblue;
+	height: 5px;
+	margin-top: 10px;
+	opacity: 0.5;
+}
+
+.form-group{
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+}
+
+.row{
+	display: flex;
+	justify-content: space-between;
+}
+
+.row .check{
+	font-size: 28px;
+	margin-right: 10px;
+}
+
+#edit,
+#delete{
+	font-size: 28px;
+	color: lightskyblue;
+	opacity: 1;
+}
+
+#delete{
+	margin-right: 60px;
+}
+
+#check{
+	font-size: 28px;
+}
+
+.row label{
+	color: lightskyblue;
+	font-size: 22px;
+}
+
+.active{
+	font-size: 52px;
+    opacity: 0.3;
+}
+
+.alert-msg{
+	display: flex;
+	justify-content: center;
+	background: yellow;
+	width: 100%;
+	font-size: 36px;
+	font-weight: 700;
+	color: lightskyblue;
+	animation: blink 2s linear infinite; 
+}
+
+#blink {
+	-webkit-animation: blink 2s linear infinite; 
+	animation: blink 2s linear infinite; 
+	font-weight: bold; 
+	color: #F00; 
+}
+
+@keyframes blink {  
+	0% { color: #F00; }
+	50% { color: #FBB; }
+	100% { color: #F00; } 
+}
+
+
+
