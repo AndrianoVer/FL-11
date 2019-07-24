@@ -115,14 +115,14 @@ header{
 	margin-right: 10px;
 }
 
-#edit,
-#delete{
+.edit,
+.delete{
 	font-size: 28px;
 	color: lightskyblue;
 	opacity: 1;
 }
 
-#delete{
+.delete{
 	margin-right: 60px;
 }
 

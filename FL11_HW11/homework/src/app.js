@@ -19,7 +19,6 @@ const generate_id = () => {
 	let id = '';
 
 	for (let i = 0; i < numbers.ten; i++) {
-		console.log(numbers.ten);
 		let index = Math.floor(Math.random() * words.length);
 		id += words[index];
 	}
@@ -50,10 +49,10 @@ const create_todo_template = (todo) => {
 			<div class="row-content-left">
 				<i class="material-icons" id="check">check_box_outline_blank</i>
 				<label>${todo.text}</label>
-				<i class="material-icons" id="edit">create</i>
+				<i class="material-icons edit">create</i>
 			</div>
 			<div class="row-content-right">
-				<i class="material-icons" id="delete">delete</i>
+				<i class="material-icons delete">delete</i>
 			</div>	
 		</div>
 	`;
@@ -99,7 +98,7 @@ const alert_template = (msg, class_name) => {
 
 btn_add.addEventListener('click', () => {
 	add_new_todo(input_text.value);
-	input_text.value = '';
+	input_text.value = '';	
 });
 
 input_text.addEventListener('keyup', () => {
@@ -110,6 +109,13 @@ input_text.addEventListener('keyup', () => {
 		btn_add.style.cursor = '';
 	}
 });
+
+form.addEventListener('click', (e) => {
+	if (e.target.classList.contains('delete')) {
+		// const id = e.target.classList.contains('row').dataset.todoId;
+		console.log(e.target);
+	}
+})
 
 
 
