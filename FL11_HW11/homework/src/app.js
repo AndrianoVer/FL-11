@@ -11,7 +11,8 @@ let numbers = {
 
 let storage = {
 	current_todos: [],
-	deleted_todos: []
+	deleted_todos: [],
+	current_edit_task: {}
 };
 
 const generate_id = () => {
@@ -57,6 +58,14 @@ const create_todo_template = (todo) => {
 		</div>
 	`;
 };
+const create_todo_template_edit = (todo) => {
+	return `
+		<div class="for_edit">
+			<input type="text">
+			<i class="material-icons save">save</i>
+		</div>
+	`
+} 
 
 const delete_todo_item = id => {
 	if (!id) { 
@@ -92,9 +101,41 @@ const alert_template = (msg, class_name) => {
 	`
 };
 
-// const edit_todo_item = (id, text) => {
+const edit_todo_item = (id, text) => {
+	if (!id) {
+		return console.log('Передайте id удаляемой задачи');
+	}
+	const check_id = storage.current_todos.some(todo => todo.id === id);
+	if (!check_id) {
+		return console.log('Передайте id задачи');
+	}
+	if (!text) {
+		return console.log('Add new action');
+	} 
 
-// };
+	storage.current_todos.forEach(todo => {
+		if(todo.id === id) {
+			todo.input_text = input_text;
+		}
+
+	});
+	return storage.current_todos;
+
+};
+
+const set_to_edit_todo = id => {
+	if (!id) {
+		return console.log('Передайте id редактируемой задачи');
+	}
+	storage.current_edit_task = storage.current_todos.find(todo => todo.id === id);
+	edit_todo_item(storage.current_edit_task.id, storage.current_edit_task.input_text);
+	change_view_for_edit(storage.current_edit_task);
+}
+
+const change_view_for_edit = todo => {
+	input_text.value = todo.input_text;
+	// create_todo_template_edit();
+}
 
 btn_add.addEventListener('click', () => {
 	add_new_todo(input_text.value);
@@ -112,8 +153,13 @@ input_text.addEventListener('keyup', () => {
 
 form.addEventListener('click', (e) => {
 	if (e.target.classList.contains('delete')) {
-		// const id = e.target.classList.contains('row').dataset.todoId;
-		console.log(e.target);
+		const id = e.target.closest('.row').dataset.todoId;
+		delete_todo_item(id);	
+	}
+
+	if (e.target.classList.contains('edit')) {
+		const id = e.target.closest('.row').dataset.todoId;
+		set_to_edit_todo(id);
 	}
 })
 

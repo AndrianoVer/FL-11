@@ -151,6 +151,10 @@ header{
 	animation: blink 2s linear infinite; 
 }
 
+.save{
+	display: inline-block;
+}
+
 #blink {
 	-webkit-animation: blink 2s linear infinite; 
 	animation: blink 2s linear infinite; 
